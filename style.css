@@ -1,0 +1,368 @@
+/* You Liked The Website?
+Consider following me - @utkarshcodes or through the links in the website's footer */
+
+/* CSS RESET */
+*{
+    padding: 0;
+    margin: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* CSS VARIABLES */
+:root{
+--secondary-color: rgb(0, 255, 0);
+}
+
+/* NAVIGATION BAR */
+#navbar{
+    display: flex;
+    align-items: center;
+    font-family: 'Varela Round', sans-serif;
+    position: relative;
+}
+
+#navbar::before{
+    content: "";
+    background-color: white;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.6;
+}
+
+/* NAVIGATION BAR: LOGO AND IMAGE */
+
+#logo{
+    margin: 10px 20px 10px 20px;
+}
+#logo img{
+    height: 70px;
+    cursor: pointer;
+    transition: all 1s ease-in-out 1s;
+}
+
+#logo:hover{
+    transform: rotate(90deg);
+}
+
+/* NAVIGATION BAR: LIST STYLING */
+
+#navbar ul{
+    display: flex;
+}
+
+
+#navbar ul li{
+    list-style: none;
+    font-size: 1.3rem;
+}
+
+#navbar ul li a{
+    color: black;
+    display: block;
+    padding: 5px 13px;
+    border-radius: 30px;
+    text-decoration: none;
+}
+
+#navbar ul li a:hover{
+    color: white;
+    background-color: black;
+}
+
+/* HOME SECTION */
+#home{
+    display: flex;
+    flex-direction: column;
+    padding: 4px 70px;
+    justify-content: center;
+    align-items: center;
+    height: 520px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+#home::before{
+    content: "";
+    background: url('images/food.jfif') no-repeat center center/cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 93%;
+    width: 100%;
+    z-index: -2;
+    opacity: 0.89;
+}
+
+#home h1{
+    text-align: center;
+}
+
+#home p{
+    text-align: center;
+    font-size: 1.5rem;
+    color: black;
+    opacity: 0;
+    animation-name: textanimation2;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-delay: 1.2s;
+}
+
+@keyframes textanimation2{
+    from{
+        opacity: 0%;
+    }
+    to{
+        opacity: 100%;
+    }
+}
+
+/* SERVICES SECTION */
+
+#services{
+    margin: 35px;
+    display: flex;
+    font-family: 'Josefin Sans', sans-serif;
+    animation-name: cardanimation;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-delay: 1.8s;
+    opacity: 0%;
+}
+
+#services-container{
+    margin-top: 245px; 
+}
+
+#services .box{
+    padding: 30px;
+    margin: 6px;
+    border-radius: 23px;
+    background-color: rgba(7, 255, 7, 0.09);
+    border: 2px solid black;
+    transition: all .3s ease-in-out 0.3s;
+}
+
+@keyframes cardanimation{
+    from{
+        opacity: 0%;
+    }
+    to{
+        opacity: 100%;
+    }
+}
+
+#services .box:hover{
+    transform: rotate(3deg);
+}
+#services .box img{
+    height: 160px;
+    display: block;
+    margin: auto;
+}
+
+#services .box img:hover{
+    transform: scale(1.3);
+}
+
+/* CLIENT SECTION */
+
+#client-section{
+    height: 350px;
+    width: 95%;
+    align-items: center;
+    justify-content: center;
+}
+
+#client-section::before{
+    content: "";
+    position: absolute;
+    /* background-image: url(cookbg.jpg); */
+    width: 95%;
+    height: 349px;
+    z-index: -1;
+    opacity: 0.4;
+}
+
+#clients{
+    border: 3px solid black;
+    border-radius: 10px;
+    background-color: rgba(7, 255, 7, 0.295);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.client-item{
+    padding: 34px;
+    transition: all .3s ease-in-out 0.3s;
+}
+
+.client-item:hover{
+    transform: scale(1.1);
+}
+
+#clients img{
+    height: 150px;
+    max-width: 500px;
+}
+
+/* CONTACT SECTION */
+
+#contact{
+    margin-top: 55px;
+}
+
+#contact-box::before{
+    content: "";
+    position: absolute;
+    width: 50%;
+    border: 3px solid black;
+    border-radius: 10px;
+    height: 81%;
+    z-index: -1;
+    background-color: rgba(7, 255, 7, 0.295);
+}
+#contact-box{
+    margin-top: 93px;
+    margin-bottom: 100px;
+}
+#contact-box input, 
+#contact-box textarea{
+    width: 100%;
+    color: black;
+    padding: 0.5rem;
+    border: 3px solid black;
+    border-radius: 5px;
+    font-size: 0.9rem;
+}
+
+#contact-box form{
+    width: 40%;
+    font-family: 'Josefin Sans', sans-serif;
+
+}
+
+#contact-box label{
+    font-size: 1.4rem;
+}
+
+.form-group{
+    padding: 10px;
+}
+
+/* FOOTER SECTION */
+
+.footer{
+    border-top: 5px solid black;
+    color:black;
+    background-color: var(--secondary-color);
+    height: 30%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.social{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social img{
+    height: 50px;
+    max-width: 500px;
+    padding: 34px;
+    transition: all .3s ease-in-out 0.3s;
+}
+
+#scl{
+    padding-top: 60px;
+}
+
+/* UTILITY CLASSES */
+
+.fc{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.h-primary{
+    animation-name: textanimation;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 3.8rem;
+    margin: 20px;
+    padding: 12px;
+}
+
+@keyframes textanimation{
+    from{
+        margin-left: -300%;
+    }
+    to{
+        margin-left: 0;
+    }
+}
+
+.h-secondary{
+    font-size: 1.4rem;
+    padding: 12px;
+}
+
+.btn{
+    padding: 8px 20px;
+    border: 3px solid black;
+    background-color: white;
+    color: black;
+    margin: 15px;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: 'Josefin Sans', sans-serif;
+    cursor: pointer;
+    opacity: 0;
+    transition: all .3s ease-in-out 0.3s;
+    animation-name: buttonanimation;
+    animation-duration: 1.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-delay: 1.6s;
+}
+
+@keyframes buttonanimation{
+    0%{
+        opacity: 0%;
+        transform: scale(1);
+    }
+    25%{
+        opacity: 100%;
+        transform: scale(1);
+    }
+    75%{
+        opacity: 100%;
+        background-color: var(--secondary-color);
+        transform: scale(1.3);
+    }
+    100%{
+        opacity: 100%;
+        transform: scale(1);
+    }
+}
+
+.btn:hover{
+    background-color: var(--secondary-color);
+    transform: scale(2);
+}
+
+.center{
+    text-align: center;
+}

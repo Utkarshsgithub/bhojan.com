@@ -1,0 +1,79 @@
+/* You Liked The Website?
+Consider following me - @utkarshcodes or through the link in the website's footer */
+
+#navbar{
+    flex-direction: column;
+}
+
+#navbar ul li{
+    font-size: .8rem;
+}
+
+/* HOME SECTION */
+
+#home{
+    height: 415px;
+    overflow: hidden;
+}
+
+#home::before{
+    height: 90%;
+    width: 100%;
+}
+
+#home p{
+    display: hidden;
+}
+
+.h-primary{
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 2rem;
+    margin: 20px;
+    padding: 12px;
+}
+
+/* SERVICES SECTION */
+
+#services{
+    flex-direction: column;
+}
+
+#services-container{
+    margin-top: 300px;
+}
+
+/* CLIENTS SECTION */
+
+#clients{
+    overflow: hidden;
+}
+
+#clients img{
+    height: 50px;
+    max-width: 500px;
+}
+
+#client-section{
+    height: 250px;
+}
+
+/* CONTACT SECTION */
+
+#contact-box::before{
+    width: 80%;
+}
+
+#contact-box form{
+    width: 70%;
+
+}
+
+/* FOOTER */
+
+.social{
+    flex-wrap: wrap;
+}
+
+.social img{
+    height: 25px;
+}
